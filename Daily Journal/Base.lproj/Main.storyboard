@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Entries Table View Controller-->
         <scene sceneID="aFw-Mr-BXv">
             <objects>
-                <tableViewController id="Zgp-yW-W2n" sceneMemberID="viewController">
+                <tableViewController id="Zgp-yW-W2n" customClass="EntriesTableViewController" customModule="Daily_Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9PS-BW-ibZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="1nr-um-5eO">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="Svi-RE-173">
                             <connections>
-                                <segue destination="b6H-aN-fEx" kind="show" id="98z-Ci-rB7"/>
+                                <segue destination="b6H-aN-fEx" kind="show" identifier="segueToEntry" id="98z-Ci-rB7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -46,7 +46,7 @@
         <!--Daily Journal-->
         <scene sceneID="cAp-gu-FA2">
             <objects>
-                <viewController id="b6H-aN-fEx" sceneMemberID="viewController">
+                <viewController id="b6H-aN-fEx" customClass="EntryViewController" customModule="Daily_Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Igd-SC-bnv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,10 +75,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Daily Journal" id="B7O-gP-RRJ">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="d5N-JK-fFz">
+                        <barButtonItem key="rightBarButtonItem" image="trash" catalog="system" style="done" id="d5N-JK-fFz">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="b6H-aN-fEx" id="Bs4-le-z4I"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="dnF-gE-gcD" id="2Qd-8K-sgL"/>
+                        <outlet property="entryTextView" destination="dRp-LY-ssV" id="gz9-Qa-VHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3V6-yA-BbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,6 +111,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
