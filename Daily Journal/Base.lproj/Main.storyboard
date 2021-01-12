@@ -53,6 +53,9 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="dnF-gE-gcD">
                                 <rect key="frame" x="47" y="108" width="320" height="216"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="b6H-aN-fEx" eventType="valueChanged" id="tei-Au-89E"/>
+                                </connections>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRp-LY-ssV">
                                 <rect key="frame" x="20" y="344" width="374" height="498"/>
@@ -83,6 +86,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="enf-ee-mNj" id="vMk-Op-9xx"/>
                         <outlet property="datePicker" destination="dnF-gE-gcD" id="2Qd-8K-sgL"/>
                         <outlet property="entryTextView" destination="dRp-LY-ssV" id="gz9-Qa-VHc"/>
                     </connections>
