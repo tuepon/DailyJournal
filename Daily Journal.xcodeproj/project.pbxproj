@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE3A8C1C26427496009A035E /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A8C1B26427496009A035E /* EntryTableViewCell.swift */; };
 		DECFAB6F2594972500872843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECFAB6E2594972500872843 /* AppDelegate.swift */; };
 		DECFAB712594972500872843 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECFAB702594972500872843 /* SceneDelegate.swift */; };
 		DECFAB762594972500872843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECFAB742594972500872843 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE3A8C1B26427496009A035E /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		DECFAB6B2594972500872843 /* Daily Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECFAB6E2594972500872843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DECFAB702594972500872843 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				DECFAB6E2594972500872843 /* AppDelegate.swift */,
 				DECFAB702594972500872843 /* SceneDelegate.swift */,
 				DECFAB892599CD8900872843 /* EntriesTableViewController.swift */,
+				DE3A8C1B26427496009A035E /* EntryTableViewCell.swift */,
 				DECFAB8D2599CE3E00872843 /* EntryViewController.swift */,
 				DECFAB93259B04E600872843 /* Entry+CoreDataClass.swift */,
 				DECFAB94259B04E600872843 /* Entry+CoreDataProperties.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3A8C1C26427496009A035E /* EntryTableViewCell.swift in Sources */,
 				DECFAB8A2599CD8900872843 /* EntriesTableViewController.swift in Sources */,
 				DECFAB96259B04E600872843 /* Entry+CoreDataProperties.swift in Sources */,
 				DECFAB8E2599CE3E00872843 /* EntryViewController.swift in Sources */,
